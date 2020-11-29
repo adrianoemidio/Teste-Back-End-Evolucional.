@@ -3,7 +3,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace AppEvolucional.Models
+namespace AppEvolucional.DataLibrary.Models
 {
     public class AlunoModel
     {

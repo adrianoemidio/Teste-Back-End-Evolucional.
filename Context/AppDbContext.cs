@@ -1,4 +1,4 @@
-using AppEvolucional.Models;
+using AppEvolucional.DataLibrary.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -17,6 +17,12 @@ namespace AppEvolucional.Context
         {
             base.OnModelCreating(modelBuilder);
 
+            //Faz o nome de aluno ser unico (UNIQUE)
+            modelBuilder.Entity<AlunoModel>()
+                .HasIndex(a => new { a.Nome})
+                .IsUnique(true);
+
+            //Adiciona no banco de dados um usuários
             const string ADMIN_ID = "87542168-as44-77ss-das-mc4s7lc5297s";
             
             const string ROLE_ID = ADMIN_ID;

@@ -46,15 +46,16 @@ namespace AppEvolucional.Controllers
 
                 if (result.Succeeded)
                 {
-                    Console.WriteLine("Consegui autenticação");
-
                     return View("UserArea");
 
+                }else
+                {
+                    ModelState.AddModelError(string.Empty, "Nome de usuário ou senha incorreta");
+                    return View(modelo);
                 }
 
                 
-                ModelState.AddModelError(string.Empty, "Login Inválido");
-            }
+        }
 
             return View(modelo);
 

@@ -19,7 +19,7 @@ namespace AppEvolucional.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("AppEvolucional.Models.AlunoModel", b =>
+            modelBuilder.Entity("AppEvolucional.DataLibrary.Models.AlunoModel", b =>
                 {
                     b.Property<long>("AlunoID")
                         .ValueGeneratedOnAdd()
@@ -28,14 +28,17 @@ namespace AppEvolucional.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("AlunoID");
+
+                    b.HasIndex("Nome")
+                        .IsUnique();
 
                     b.ToTable("Aluno");
                 });
 
-            modelBuilder.Entity("AppEvolucional.Models.NotasModel", b =>
+            modelBuilder.Entity("AppEvolucional.DataLibrary.Models.NotasModel", b =>
                 {
                     b.Property<long>("NotasID")
                         .ValueGeneratedOnAdd()
@@ -107,7 +110,7 @@ namespace AppEvolucional.Migrations
                         new
                         {
                             Id = "87542168-as44-77ss-das-mc4s7lc5297s",
-                            ConcurrencyStamp = "06173667-2b0f-4a53-ab66-a6d47a35c33b",
+                            ConcurrencyStamp = "1cf33af9-1763-47f5-8377-68f050d908f0",
                             Name = "candidato-evolucional",
                             NormalizedName = "candidato-evolucional"
                         });
@@ -288,7 +291,7 @@ namespace AppEvolucional.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("AppEvolucional.Models.UserModel", b =>
+            modelBuilder.Entity("AppEvolucional.DataLibrary.Models.UserModel", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
@@ -299,13 +302,13 @@ namespace AppEvolucional.Migrations
                         {
                             Id = "87542168-as44-77ss-das-mc4s7lc5297s",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "da374cee-4905-424f-9f6b-a4cb86f34561",
+                            ConcurrencyStamp = "a65fd942-473f-4527-81ce-54a975db3590",
                             Email = "candidato-evolucional",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "candidato-evolucional",
                             NormalizedUserName = "candidato-evolucional",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDwxT2Xo139KleiSt0veQdTsSlBWWufYe9hcR7Btl3SHp2SGPfDLUqJf+CGauPMLQA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECHU/6gfHANPnk4vDr0s3eYLGKh1gP/4qGSdwMydb+njiOr7+gl7G7DujnGgrocWNw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

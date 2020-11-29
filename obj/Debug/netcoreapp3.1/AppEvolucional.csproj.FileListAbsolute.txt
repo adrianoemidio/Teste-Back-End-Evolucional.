@@ -80,3 +80,10 @@
 /home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Core.dll
 /home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll
 /home/adriano/Projects/Teste_evolucional/AppEvolucional/obj/Debug/netcoreapp3.1/Razor/Views/Home/UserArea.cshtml.g.cs
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/Dapper.dll
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/System.Data.SqlClient.dll
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll

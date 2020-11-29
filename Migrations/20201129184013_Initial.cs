@@ -13,7 +13,7 @@ namespace AppEvolucional.Migrations
                 {
                     AlunoID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Nome = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -191,12 +191,18 @@ namespace AppEvolucional.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "87542168-as44-77ss-das-mc4s7lc5297s", "06173667-2b0f-4a53-ab66-a6d47a35c33b", "candidato-evolucional", "candidato-evolucional" });
+                values: new object[] { "87542168-as44-77ss-das-mc4s7lc5297s", "1cf33af9-1763-47f5-8377-68f050d908f0", "candidato-evolucional", "candidato-evolucional" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "87542168-as44-77ss-das-mc4s7lc5297s", 0, "da374cee-4905-424f-9f6b-a4cb86f34561", "UserModel", "candidato-evolucional", true, false, null, "candidato-evolucional", "candidato-evolucional", "AQAAAAEAACcQAAAAEDwxT2Xo139KleiSt0veQdTsSlBWWufYe9hcR7Btl3SHp2SGPfDLUqJf+CGauPMLQA==", null, false, "", false, "candidato-evolucional" });
+                values: new object[] { "87542168-as44-77ss-das-mc4s7lc5297s", 0, "a65fd942-473f-4527-81ce-54a975db3590", "UserModel", "candidato-evolucional", true, false, null, "candidato-evolucional", "candidato-evolucional", "AQAAAAEAACcQAAAAECHU/6gfHANPnk4vDr0s3eYLGKh1gP/4qGSdwMydb+njiOr7+gl7G7DujnGgrocWNw==", null, false, "", false, "candidato-evolucional" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Aluno_Nome",
+                table: "Aluno",
+                column: "Nome",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
