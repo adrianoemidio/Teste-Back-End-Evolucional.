@@ -21,5 +21,5 @@ Antes de iniciar o aplicativo, deve-se configurar o banco de dados, para isso ad
 
 O projeto foi pensado em uma solução "Code first", ou seja, para se inicilizar o banco de dados, deve se excutar o migration, apos a adicção da string de conexão conforme a seguir:
 
-$dotnet-ef migrations add minhaMigration
-$dotnet-ef database update
+<p>$dotnet-ef migrations add minhaMigration</p>
+<p>$dotnet-ef database update</p>
