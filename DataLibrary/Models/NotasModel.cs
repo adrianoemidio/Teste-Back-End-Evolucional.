@@ -13,6 +13,7 @@ namespace AppEvolucional.DataLibrary.Models
         
         [Required]
         public long AlunoID { get; set; }
+        public AlunoModel Aluno { get; set; }
         public double Matematica{get; set;}
         public double Portugues{get; set;}
         public double Historia{get; set;}

@@ -28,7 +28,7 @@ namespace AppEvolucional.Controllers
              _logger = logger;
         }
 
-        [HttpGet]
+        
         [AllowAnonymous]
         public IActionResult Index()
         {
@@ -53,7 +53,6 @@ namespace AppEvolucional.Controllers
                     ModelState.AddModelError(string.Empty, "Nome de usuário ou senha incorreta");
                     return View(modelo);
                 }
-
                 
         }
 
@@ -62,11 +61,33 @@ namespace AppEvolucional.Controllers
 
         }
 
-       [Authorize]
-        public IActionResult UserArea()
+        public IActionResult UserArea(string botao1,string botao2)
         {
+    
+            var isAuthenticated = User.Identity.IsAuthenticated;
+            
+            if(isAuthenticated)
+            {
+
+                if(botao1 != null)
+                {
+                    Console.WriteLine("Botão 1 pressionado");
+
+                }else if(botao2 != null)
+                {
+                    Console.WriteLine("Botão 2 pressionado");
+                }
+
             return View();
+
+            }
+
+            return Redirect("Index");
+
+            
+
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

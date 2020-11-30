@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppEvolucional.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201129184013_Initial")]
+    [Migration("20201129205300_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,6 +79,8 @@ namespace AppEvolucional.Migrations
 
                     b.HasKey("NotasID");
 
+                    b.HasIndex("AlunoID");
+
                     b.ToTable("Notas");
                 });
 
@@ -112,7 +114,7 @@ namespace AppEvolucional.Migrations
                         new
                         {
                             Id = "87542168-as44-77ss-das-mc4s7lc5297s",
-                            ConcurrencyStamp = "1cf33af9-1763-47f5-8377-68f050d908f0",
+                            ConcurrencyStamp = "b38a254d-601c-44db-a98b-3fc2f2526857",
                             Name = "candidato-evolucional",
                             NormalizedName = "candidato-evolucional"
                         });
@@ -304,18 +306,29 @@ namespace AppEvolucional.Migrations
                         {
                             Id = "87542168-as44-77ss-das-mc4s7lc5297s",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a65fd942-473f-4527-81ce-54a975db3590",
+                            ConcurrencyStamp = "5ffb38c3-3688-42b9-b1a0-e16f1fb885f8",
                             Email = "candidato-evolucional",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "candidato-evolucional",
                             NormalizedUserName = "candidato-evolucional",
-                            PasswordHash = "AQAAAAEAACcQAAAAECHU/6gfHANPnk4vDr0s3eYLGKh1gP/4qGSdwMydb+njiOr7+gl7G7DujnGgrocWNw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGmpgnHLmuYfrUZiJpXDr1fK9MddxRSp1LjpBeItAFscE9ggX/TPEhwA7StOz+YlSg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
                             UserName = "candidato-evolucional"
                         });
+                });
+
+            modelBuilder.Entity("AppEvolucional.DataLibrary.Models.NotasModel", b =>
+                {
+                    b.HasOne("AppEvolucional.DataLibrary.Models.AlunoModel", "Aluno")
+                        .WithMany()
+                        .HasForeignKey("AlunoID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Aluno");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

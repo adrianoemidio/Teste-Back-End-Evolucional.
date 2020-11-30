@@ -1,6 +1,23 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Área Logada";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+@using (Html.BeginForm())
+{
+
+    <div class="form-horizontal">
+        <hr />
+        <div class = "form-group">
+            <div class = "col-md-offset=2 col-md-10">
+                <button name="botao1" value="botao1" asp-action="UserArea">Botão 1</button>
+                <button name="botao2" value="botao2" asp-action="UserArea">Botão 2</button>
+
+                               
+            </div>
+       </div>
+
+    </div>
+
+
+}
