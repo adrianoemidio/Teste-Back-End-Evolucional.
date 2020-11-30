@@ -26,11 +26,12 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
 
         }
 
-        public static List<UserModel> ListAluno(int alunoID,string nome)
+        public static List<AlunoModel> ListAluno()
         {
             
-            List<UserModel> userList = new List<UserModel>();
+            List<AlunoModel> userList = new List<AlunoModel>();
 
+            /*
             AlunoModel data = new AlunoModel
             {
 
@@ -38,10 +39,11 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
                 Nome = nome
 
             };
+            */
 
-            string sql = @"SELECT * FROM Users WHERE @Nome = Nome;";
+            string sql = @"select * from Aluno;";
 
-            userList = SqlDataAccess.LoadData<UserModel>(sql);
+            userList = SqlDataAccess.LoadData<AlunoModel>(sql);
 
         
             return userList;         

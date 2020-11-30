@@ -87,3 +87,8 @@
 /home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll
 /home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll
 /home/adriano/Projects/Teste_evolucional/AppEvolucional/obj/Debug/netcoreapp3.1/Razor/Views/Home/UserArea.cshtml.g.cs
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/ClosedXML.dll
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/DocumentFormat.OpenXml.dll
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/ExcelNumberFormat.dll
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/System.IO.Packaging.dll
+/home/adriano/Projects/Teste_evolucional/AppEvolucional/bin/Debug/netcoreapp3.1/Microsoft.Office.Interop.Excel.dll

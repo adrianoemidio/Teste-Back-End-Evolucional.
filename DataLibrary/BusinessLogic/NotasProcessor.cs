@@ -43,6 +43,17 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
 
         }
 
+        public static List<NotasModel> ListNotas()
+        {
+            List<NotasModel> listaNotas = new List<NotasModel>();
+
+            string sql = @"select * from Notas;";
+
+            listaNotas = SqlDataAccess.LoadData<NotasModel>(sql);
+
+            return listaNotas;
+        }
+
 
     }
 

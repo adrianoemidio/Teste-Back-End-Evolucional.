@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using AppEvolucional.Models;
 using AppEvolucional.DataLibrary.BusinessLogic;
+using System.IO;
 
 namespace AppEvolucional.Controllers
 {
@@ -82,8 +83,17 @@ namespace AppEvolucional.Controllers
                 {
                     Console.WriteLine("Botão 2 pressionado");
 
-                    NotasProcessor.CreateNota(2,6.0,5.6,7.0,10,9.6,8,10,10,5);
-                    
+                    string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                    string fileName = "Notas.xlsx";
+
+                    MemoryStream stream = ExportXLSX.Export();
+
+                    Console.WriteLine("ok");
+
+                    var content = stream.ToArray();
+                    return File(content, contentType, fileName);
+
+                                        
                 }
 
             return View();
