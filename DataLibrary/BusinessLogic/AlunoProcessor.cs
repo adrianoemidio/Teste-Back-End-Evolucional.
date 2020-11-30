@@ -8,8 +8,16 @@ using System.Linq;
 
 namespace AppEvolucional.DataLibrary.BusinessLogic
 {
+    /// <summary>
+    /// Classe para se realizar operações com a tabela Alunos no db
+    /// </summary>
     public static class AlunoProcessor
     {
+        /// <summary>
+        /// Cria um novo aluno no banco de dados
+        /// </summary>
+        /// <param name="nome">Nome do aluno</param>
+        /// <returns>Id do aluno, caso haja um erro, retorna -1</returns>
         public static int CreateAluno(string nome)
         {
             AlunoModel data = new AlunoModel
@@ -26,20 +34,14 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
 
         }
 
+        /// <summary>
+        /// Retrona todos os alunos cadastrados no banco de dados
+        /// </summary>
+        /// <returns>Lista contendo todos os alunos</returns>
         public static List<AlunoModel> ListAluno()
         {
             
             List<AlunoModel> userList = new List<AlunoModel>();
-
-            /*
-            AlunoModel data = new AlunoModel
-            {
-
-                AlunoID = alunoID,
-                Nome = nome
-
-            };
-            */
 
             string sql = @"select * from Aluno;";
 

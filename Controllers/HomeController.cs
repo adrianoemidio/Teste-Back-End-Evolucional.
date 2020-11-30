@@ -14,6 +14,9 @@ using System.IO;
 
 namespace AppEvolucional.Controllers
 {
+    /// <summary>
+    /// Controlador da página inicial do view
+    /// </summary>
     public class HomeController : Controller
     {
 
@@ -21,6 +24,12 @@ namespace AppEvolucional.Controllers
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly ILogger<HomeController> _logger;
 
+        /// <summary>
+        /// Incia o controlador da página inicial
+        /// </summary>
+        /// <param name="logger">Geração de log</param>
+        /// <param name="userManager">Gerenciamento de indentidade p/ usuários</param>
+        /// <param name="signInManager">Gestão de login</param>
         public HomeController(ILogger<HomeController> logger,
             UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
@@ -63,9 +72,10 @@ namespace AppEvolucional.Controllers
 
         }
 
+        
         public IActionResult UserArea(string botao1,string botao2)
         {
-    
+            //Verifica se o usuário está logado
             var isAuthenticated = User.Identity.IsAuthenticated;
             
             if(isAuthenticated)
@@ -73,26 +83,28 @@ namespace AppEvolucional.Controllers
 
                 if(botao1 != null)
                 {
-                    Console.WriteLine("Botão 1 pressionado");
-
                     Tablefill.startOperation();
 
-                    Console.WriteLine("ok");
+                    ViewData["msg"] = "Populção do banco de dados concluída";
 
                 }else if(botao2 != null)
                 {
-                    Console.WriteLine("Botão 2 pressionado");
-
+                    //Dados para exportar a planilha
                     string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
                     string fileName = "Notas.xlsx";
 
                     MemoryStream stream = ExportXLSX.Export();
+                                        
+                    if(stream != null)
+                    {
+                        var content = stream.ToArray();
+          
+                        return File(content, contentType, fileName);
 
-                    Console.WriteLine("ok");
 
-                    var content = stream.ToArray();
-                    return File(content, contentType, fileName);
-
+                    }else{
+                        ViewData["msg"] = "Algo deu errado! Tente popular o banco de dados com o botão 1!";
+                    }
                                         
                 }
 

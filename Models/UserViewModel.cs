@@ -5,6 +5,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppEvolucional.Models
 {
+    /// <summary>
+    /// Modelo de visualização para os dados dos usários do sistema
+    /// </summary>
     public class UserViewModel
     {
 

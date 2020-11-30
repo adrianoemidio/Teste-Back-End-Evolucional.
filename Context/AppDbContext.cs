@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace AppEvolucional.Context
 {
+    /// <summary>
+    /// Contexto para criação do banco dados
+    /// </summary>
     public class AppDbContext : IdentityDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options): base(options) { }
@@ -13,6 +16,10 @@ namespace AppEvolucional.Context
         public DbSet<NotasModel> Notas {get; set;}
 
 
+        /// <summary>
+        /// Sobreescrita do método chamado no carregamento do Banco de dados
+        /// </summary>
+        /// <param name="modelBuilder">Modelo de banco dados</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

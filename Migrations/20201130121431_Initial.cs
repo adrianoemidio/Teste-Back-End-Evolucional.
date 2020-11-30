@@ -197,12 +197,12 @@ namespace AppEvolucional.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "87542168-as44-77ss-das-mc4s7lc5297s", "b6093f85-2052-4f3e-ac21-1062b5854d8e", "candidato-evolucional", "candidato-evolucional" });
+                values: new object[] { "87542168-as44-77ss-das-mc4s7lc5297s", "1f8fc8be-79e9-43fd-8657-93f09d0c45ac", "candidato-evolucional", "candidato-evolucional" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "87542168-as44-77ss-das-mc4s7lc5297s", 0, "35c5d6cc-9227-4ad5-8bc2-61bdf5eb9ae2", "UserModel", "candidato-evolucional", true, false, null, "candidato-evolucional", "candidato-evolucional", "AQAAAAEAACcQAAAAEPfSh3G9fDeAz+i++Gn2gVZ1kctfrePgoCTQODTyTMEIxy/BLgHLrtNh1JRYMcQX9g==", null, false, "", false, "candidato-evolucional" });
+                values: new object[] { "87542168-as44-77ss-das-mc4s7lc5297s", 0, "a76bdcd5-f063-4bb2-85f1-a1fa9313a3bb", "UserModel", "candidato-evolucional", true, false, null, "candidato-evolucional", "candidato-evolucional", "AQAAAAEAACcQAAAAEJipalYjjxqKn1NQQr/3TuU8EqzKR4RXhXNcAnfanzsfyAqOa/mHXUDjI3iuVwN+pw==", null, false, "", false, "candidato-evolucional" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Aluno_Nome",

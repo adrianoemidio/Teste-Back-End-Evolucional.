@@ -1,0 +1,3 @@
+-- Como o único dado gerado no banco é login, porém
+-- este é criptrografado, logo este é geardo no código
+-- Veja o arquivo AppDbContext.cs para saber mais.

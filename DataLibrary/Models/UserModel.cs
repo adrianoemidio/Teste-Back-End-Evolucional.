@@ -6,6 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppEvolucional.DataLibrary.Models
 {
+    /// <summary>
+    /// Modelo de usuário como referência para IdentityUser
+    /// </summary>
     public class UserModel : IdentityUser
     {
 

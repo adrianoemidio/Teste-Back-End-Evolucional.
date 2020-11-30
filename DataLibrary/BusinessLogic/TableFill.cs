@@ -7,6 +7,9 @@ using System.Linq;
 
 namespace AppEvolucional.DataLibrary.BusinessLogic
 {
+    /// <summary>
+    /// Classe para preencher a tabela dados as espeficações
+    /// </summary>
     public static class Tablefill
     {
 
@@ -21,7 +24,10 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
             "Lisboa","Carvalho","Altino","Prudente"
         };
 
-        
+        /// <summary>
+        /// Preenche o banco dados com 1000 alunos aletórios diferentes
+        /// cada um com o seu conjunto de notas gerado aletorimente
+        /// </summary>
         public static void startOperation()
         {
             Random rand = new Random();

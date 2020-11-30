@@ -11,8 +11,15 @@ using System.IO;
 
 namespace AppEvolucional.DataLibrary.BusinessLogic
 {
+    /// <summary>
+    /// Classe para exportar o banco de dados no formato XLSX
+    /// </summary>
     public static class ExportXLSX
     {
+        /// <summary>
+        /// Gera a tela no formato XLSX
+        /// </summary>
+        /// <returns>Memória contendo o dado da planilha</returns>
         public static MemoryStream Export()
         {
             List<AlunoModel> alunos = AlunoProcessor.ListAluno();
@@ -30,13 +37,11 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
             medias.Fisica = 0;
             medias.Quimica = 0;
 
-            
-
             try
             {
-
                 using (var workbook = new XLWorkbook())
                 {
+                    //Gera op caebçalho da tabela
                     IXLWorksheet worksheet =
                     workbook.Worksheets.Add("Notas Alunos");
                     worksheet.Cell(1, 1).Value = "Nome Aluno";
@@ -52,8 +57,10 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
 
                     int index = 1;
 
+                    //Adiciona todos as notas do banco de dados
                     for (; index <= alunos.Count; index++)
                     {
+
                         worksheet.Cell(index + 1, 1).Value = alunos[index - 1].Nome;
                         worksheet.Cell(index + 1, 2).Value = notas[index - 1].Matematica;
                         worksheet.Cell(index + 1, 3).Value = notas[index - 1].Portugues;
@@ -77,6 +84,7 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
              
                     }
 
+                    //Gera a média das notas
                     worksheet.Cell(index + 1, 1).Value =  " Medias";
                     worksheet.Cell(index + 1, 2).Value  =   medias.Matematica/alunos.Count();
                     worksheet.Cell(index + 1, 3).Value  =   medias.Portugues/alunos.Count();
@@ -88,7 +96,8 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
                     worksheet.Cell(index + 1, 9).Value  =   medias.Fisica/alunos.Count();
                     worksheet.Cell(index + 1, 10).Value  =  medias.Quimica/alunos.Count();
                     
-
+                    
+                    //Retorna o stram de dados
                     using (var stream = new MemoryStream())
                     {
                         workbook.SaveAs(stream);

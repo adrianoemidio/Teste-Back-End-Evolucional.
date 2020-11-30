@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppEvolucional.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201130044433_Initial")]
+    [Migration("20201130121431_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -114,7 +114,7 @@ namespace AppEvolucional.Migrations
                         new
                         {
                             Id = "87542168-as44-77ss-das-mc4s7lc5297s",
-                            ConcurrencyStamp = "b6093f85-2052-4f3e-ac21-1062b5854d8e",
+                            ConcurrencyStamp = "1f8fc8be-79e9-43fd-8657-93f09d0c45ac",
                             Name = "candidato-evolucional",
                             NormalizedName = "candidato-evolucional"
                         });
@@ -306,13 +306,13 @@ namespace AppEvolucional.Migrations
                         {
                             Id = "87542168-as44-77ss-das-mc4s7lc5297s",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "35c5d6cc-9227-4ad5-8bc2-61bdf5eb9ae2",
+                            ConcurrencyStamp = "a76bdcd5-f063-4bb2-85f1-a1fa9313a3bb",
                             Email = "candidato-evolucional",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "candidato-evolucional",
                             NormalizedUserName = "candidato-evolucional",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPfSh3G9fDeAz+i++Gn2gVZ1kctfrePgoCTQODTyTMEIxy/BLgHLrtNh1JRYMcQX9g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJipalYjjxqKn1NQQr/3TuU8EqzKR4RXhXNcAnfanzsfyAqOa/mHXUDjI3iuVwN+pw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

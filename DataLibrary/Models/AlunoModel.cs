@@ -5,6 +5,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppEvolucional.DataLibrary.Models
 {
+    /// <summary>
+    /// Modelo de dados para o Aluno
+    /// </summary>
     public class AlunoModel
     {
         [Key]

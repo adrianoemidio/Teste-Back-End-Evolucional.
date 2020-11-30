@@ -1,0 +1,8 @@
+Atenção: Os arquivos desta pasta são apenas para referencia e naõ devem ser executados pois 
+o projeto foi realizado utilziando metodologia "Code First". Para inicializao o banco de 
+dados utilize migration:
+
+$dotnet-ef migrations add minhaMigration
+$dotnet-ef database update
+
+

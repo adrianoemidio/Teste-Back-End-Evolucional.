@@ -8,15 +8,19 @@
 
     <div class="form-horizontal">
         <hr />
+        @if (ViewData["msg"] != null)
+        {
+           <p>@ViewData["msg"]</p>
+
+           ViewData["msg"] = null;
+
+        }
         <div class = "form-group">
             <div class = "col-md-offset=2 col-md-10">
                 <button name="botao1" value="botao1" asp-action="UserArea">Botão 1</button>
-                <button name="botao2" value="botao2" asp-action="UserArea">Botão 2</button>
-
-                               
+                <button name="botao2" value="botao2" asp-action="UserArea">Botão 2</button>           
             </div>
        </div>
-
     </div>
 
 

@@ -5,6 +5,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppEvolucional.DataLibrary.Models
 {
+    /// <summary>
+    /// Modelo de dados para notas
+    /// </summary>
     public class NotasModel
     {
         [Key]
