@@ -10,7 +10,7 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
 {
     public static class NotasProcessor
     {
-        public static int CreateNota(long notasID,
+        public static int CreateNota(
             long alunoID,double matematica,
             double portugues,double historia,
             double geografia,double ingles,
@@ -19,7 +19,6 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
         {
             NotasModel data = new NotasModel
             {
-                NotasID = notasID,
                 AlunoID = alunoID,
                 Matematica = matematica,
                 Portugues = portugues,
@@ -32,11 +31,11 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
                 Quimica  = quimica
             };
 
-            string sql = @"insert int dbo.Users (NotasID,AlunoID,
-                        Matematica,Portugues,Historia,Geografia,Ingles,Biologia,
-                        Filosofia,Fisica,Quimica) values(@NotasID,@AlunoID,
-                        @Matematica,@Portugues,@Historia,@Geografia,@Ingles,@Biologia,
-                        @Filosofia,@Fisica,@Quimica);";
+            string sql = @"insert dbo.Notas (AlunoID, Matematica,
+                        Portugues,Historia,Geografia,Ingles,Biologia,
+                        Filosofia,Fisica,Quimica) values(@AlunoID,
+                        @Matematica,@Portugues,@Historia,@Geografia,@Ingles,
+                        @Biologia,@Filosofia,@Fisica,@Quimica);";
                                         
 
             return SqlDataAccess.SaveData(sql,data);

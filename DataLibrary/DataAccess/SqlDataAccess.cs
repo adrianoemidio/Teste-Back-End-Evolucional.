@@ -13,8 +13,6 @@ namespace AppEvolucional.DataLibrary.DataAccess
         
         public static string GetConnectionString(string connectionName = "Db")
         {
-            //return ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
-            //return connectionName;
             return Startup.StaticConfig.GetConnectionString("DefaultConnection");
 
         }
@@ -32,7 +30,17 @@ namespace AppEvolucional.DataLibrary.DataAccess
         {
             using(IDbConnection cnn =  new SqlConnection(GetConnectionString()))
             {
-                return cnn.Execute(sql,data);
+                try
+                {
+                    //return cnn.Execute(sql,data);
+                    return cnn.Query<int>(sql,data).Single();
+                    
+                }
+                catch
+                {
+                    return -1;
+                }
+
             } 
         }
 

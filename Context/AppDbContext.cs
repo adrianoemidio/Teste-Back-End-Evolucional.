@@ -19,7 +19,7 @@ namespace AppEvolucional.Context
 
             //Faz o nome de aluno ser unico (UNIQUE)
             modelBuilder.Entity<AlunoModel>()
-                .HasIndex(a => new { a.Nome})
+                .HasIndex(a => new {a.Nome})
                 .IsUnique(true);
 
             //Adiciona no banco de dados um usuários

@@ -112,7 +112,7 @@ namespace AppEvolucional.Migrations
                         new
                         {
                             Id = "87542168-as44-77ss-das-mc4s7lc5297s",
-                            ConcurrencyStamp = "b38a254d-601c-44db-a98b-3fc2f2526857",
+                            ConcurrencyStamp = "b6093f85-2052-4f3e-ac21-1062b5854d8e",
                             Name = "candidato-evolucional",
                             NormalizedName = "candidato-evolucional"
                         });
@@ -304,13 +304,13 @@ namespace AppEvolucional.Migrations
                         {
                             Id = "87542168-as44-77ss-das-mc4s7lc5297s",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5ffb38c3-3688-42b9-b1a0-e16f1fb885f8",
+                            ConcurrencyStamp = "35c5d6cc-9227-4ad5-8bc2-61bdf5eb9ae2",
                             Email = "candidato-evolucional",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "candidato-evolucional",
                             NormalizedUserName = "candidato-evolucional",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGmpgnHLmuYfrUZiJpXDr1fK9MddxRSp1LjpBeItAFscE9ggX/TPEhwA7StOz+YlSg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPfSh3G9fDeAz+i++Gn2gVZ1kctfrePgoCTQODTyTMEIxy/BLgHLrtNh1JRYMcQX9g==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

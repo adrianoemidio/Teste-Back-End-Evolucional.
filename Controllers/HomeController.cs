@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using AppEvolucional.Models;
+using AppEvolucional.DataLibrary.BusinessLogic;
 
 namespace AppEvolucional.Controllers
 {
@@ -73,9 +74,16 @@ namespace AppEvolucional.Controllers
                 {
                     Console.WriteLine("Botão 1 pressionado");
 
+                    Tablefill.startOperation();
+
+                    Console.WriteLine("ok");
+
                 }else if(botao2 != null)
                 {
                     Console.WriteLine("Botão 2 pressionado");
+
+                    NotasProcessor.CreateNota(2,6.0,5.6,7.0,10,9.6,8,10,10,5);
+                    
                 }
 
             return View();

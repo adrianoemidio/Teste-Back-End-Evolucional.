@@ -10,18 +10,17 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
 {
     public static class AlunoProcessor
     {
-        public static int CreateAluno(int alunoID,string nome)
+        public static int CreateAluno(string nome)
         {
             AlunoModel data = new AlunoModel
             {
 
-                AlunoID = alunoID,
-                Nome = nome
+               Nome = nome
 
             };
 
-            string sql = @"insert int dbo.Users (AlunoID,Nome)
-                         values(@AlunoID, @Nome);";
+            string sql = @"insert dbo.Aluno(Nome)
+                         values(@Nome); select SCOPE_IDENTITY()";
 
             return SqlDataAccess.SaveData(sql,data);
 
@@ -40,7 +39,7 @@ namespace AppEvolucional.DataLibrary.BusinessLogic
 
             };
 
-           string sql = @"SELECT * FROM Users WHERE @Nome = Nome;";
+            string sql = @"SELECT * FROM Users WHERE @Nome = Nome;";
 
             userList = SqlDataAccess.LoadData<UserModel>(sql);
 
