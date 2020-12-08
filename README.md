@@ -1,5 +1,5 @@
 # AppEvolucional
-Projeto de Teste para Evolucional
+Projeto de Demostração de aplicativo de controle de notas de alunos.
 
 Adriano (adriano.emidio0@gmail.com)
 
